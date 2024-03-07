@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Aluno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-15 03:43:03 "/>
+        <attribute name="created" value="QWx1bm87TElNMDMtTjEwOzIwMjQtMDItMTU7IjEyOjQ2OjEzICI7MjI0NA=="/>
+        <attribute name="edited" value="QWx1bm87TElNMDMtTjEwOzIwMjQtMDItMTU7IjAzOjQzOjAzICI7MjM7MjQwMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="parcelas" type="Integer" array="False" size=""/>
+            <declare name="vezes" type="Integer" array="False" size=""/>
+            <declare name="final" type="Integer" array="False" size=""/>
+            <declare name="dias" type="Integer" array="False" size=""/>
+            <declare name="pagamento" type="String" array="False" size=""/>
+            <declare name="data" type="String" array="False" size=""/>
+            <declare name="valor" type="Integer" array="False" size=""/>
+            <declare name="destino" type="String" array="False" size=""/>
+            <declare name="senha2" type="Integer" array="False" size=""/>
+            <declare name="resposta" type="String" array="False" size=""/>
+            <declare name="criar" type="Integer" array="False" size=""/>
+            <declare name="login" type="Integer" array="False" size=""/>
+            <declare name="senha" type="String" array="False" size=""/>
+            <declare name="cliente" type="String" array="False" size=""/>
+            <declare name="opcoes" type="Integer" array="False" size=""/>
+            <output expression="&quot; Ol&#225;&quot;" newline="True"/>
+            <output expression="&quot; Para acessar nosso site crie uma conta ou fa&#231;a o login&quot;" newline="True"/>
+            <output expression="&quot; Para criar uma conta escreva 'criar conta', caso deseje fazer o login escreva 'login'(com letras min&#250;sculas).&quot;" newline="True"/>
+            <input variable="resposta"/>
+            <if expression="resposta == &quot;criar conta&quot;">
+                <then>
+                    <output expression="&quot; Insira seu nome completo.&quot;" newline="True"/>
+                    <input variable="cliente"/>
+                    <output expression="cliente &amp; &quot; agora porfavor crie uma senha num&#233;rica.&quot;" newline="True"/>
+                    <input variable="senha"/>
+                    <output expression="&quot; A senha desejada &#233; &quot; &amp;senha&amp; &quot; ?&quot;" newline="True"/>
+                    <output expression="&quot; Se sim escreva 'sim', caso contr&#225;rio escreva 'mudar senha'(com letras min&#250;sculas).  &quot;" newline="True"/>
+                    <input variable="resposta"/>
+                    <if expression="resposta == &quot;sim&quot;">
+                        <then>
+                            <output expression="&quot; Tudo pronto. &quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="resposta == &quot;mudar senha&quot;">
+                                <then>
+                                    <output expression="&quot; insira uma nova senha num&#233;rica. &quot;" newline="True"/>
+                                    <input variable="senha2"/>
+                                    <output expression="&quot; sua nova senha &#233; &quot; &amp;senha2" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="resposta == &quot;login&quot;">
+                        <then>
+                            <output expression="&quot; Insira seu nome completo porfavor&quot;" newline="True"/>
+                            <input variable="cliente"/>
+                            <output expression="cliente &amp; &quot; agora insira a sua senha porfavor.&quot;" newline="True"/>
+                            <input variable="senha"/>
+                            <output expression="&quot; Tudo pronto para a sua experi&#234;ncia :)&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot; ... &quot;" newline="True"/>
+            <output expression="&quot; Para onde o(a) senhor(a) deseja viajar ?. &quot;" newline="True"/>
+            <input variable="destino"/>
+            <output expression="&quot; checando ... &quot;" newline="True"/>
+            <output expression="&quot; possu&#237;mos 57 op&#231;&#245;es de hot&#233;is em &quot; &amp; destino" newline="True"/>
+            <output expression="&quot; Qual a m&#233;dia de valor da diaria? ( apenas o n&#250;mero ). &quot;" newline="True"/>
+            <input variable="valor"/>
+            <if expression="valor &gt;= 500">
+                <then>
+                    <output expression="&quot; possuimos 8 op&#231;&#245;es de hot&#233;is verificados nesta faixa de valor. &quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="valor &lt;= 499">
+                        <then>
+                            <output expression="&quot; possu&#237;mos 8 op&#231;&#245;es de hot&#233;is nesta faixa de valor. &quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot; O(a) Senhor(a) deseja ver as op&#231;&#245;es ?.&quot;" newline="True"/>
+            <input variable="resposta"/>
+            <if expression="resposta == &quot;sim&quot;">
+                <then>
+                    <output expression="&quot; Aqui est&#227;o as 10 op&#231;&#245;es mais bem avaliadas:&quot;" newline="True"/>
+                    <output expression="&quot;1 Belmond Hotel das Cataratas &quot;" newline="True"/>
+                    <output expression="&quot;2 Hotel Unique &quot;" newline="True"/>
+                    <output expression="&quot;3 Fasano Rio de Janeiro &quot;" newline="True"/>
+                    <output expression="&quot;4 Emiliano Rio de Janeiro &quot;" newline="True"/>
+                    <output expression="&quot;5 Copacabana Palace &quot;" newline="True"/>
+                    <output expression="&quot;6 Ponta dos Ganchos Resort &quot;" newline="True"/>
+                    <output expression="&quot;7 Txai Resort Itacar&#233; &quot;" newline="True"/>
+                    <output expression="&quot;8 Tivoli Ecoresort Praia do Forte &quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="resposta == &quot;Sim&quot;">
+                        <then>
+                            <output expression="&quot; Aqui est&#227;o as 10 op&#231;&#245;es mais bem avaliadas:&quot;" newline="True"/>
+                            <output expression="&quot;1 Belmond Hotel das Cataratas &quot;" newline="True"/>
+                            <output expression="&quot;2 Hotel Unique &quot;" newline="True"/>
+                            <output expression="&quot;3 Fasano Rio de Janeiro &quot;" newline="True"/>
+                            <output expression="&quot;4 Emiliano Rio de Janeiro &quot;" newline="True"/>
+                            <output expression="&quot;5 Copacabana Palace &quot;" newline="True"/>
+                            <output expression="&quot;6 Ponta dos Ganchos Resort &quot;" newline="True"/>
+                            <output expression="&quot;7 Txai Resort Itacar&#233; &quot;" newline="True"/>
+                            <output expression="&quot;8 Tivoli Ecoresort Praia do Forte &quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot; Para mais detalhes digite o n&#250;mero da sua escolha.&quot;" newline="True"/>
+            <input variable="resposta"/>
+            <output expression="&quot; Boa escolha, esse hotel &#233; um dos mais conceituados em &quot; &amp;destino&amp; &quot; quando o assunto &#233; conforto e acolhimento&quot;" newline="True"/>
+            <output expression="&quot;Qual a data da estadia? para consultarmos se h&#225; quartos livre.&quot;" newline="True"/>
+            <input variable="data"/>
+            <output expression="&quot; Para esse dia possu&#237;mos 4 quartos o 12, 23, 27 e o 38. &quot;" newline="True"/>
+            <output expression="&quot; O(a) senhor(a) deseja algum desses quartos? (com letras min&#250;sculas) &quot;" newline="True"/>
+            <input variable="resposta"/>
+            <if expression="resposta == &quot;sim&quot;">
+                <then>
+                    <output expression="&quot; Quantos dias de hospedagem?&quot;" newline="True"/>
+                    <input variable="dias"/>
+                    <assign variable="final" expression="dias*valor"/>
+                    <output expression="&quot; Ok &quot;" newline="True"/>
+                    <output expression="&quot; Qual ser&#225; o metodo de pagamento ?&quot;" newline="True"/>
+                    <input variable="pagamento"/>
+                    <output expression="&quot; Perfeito, o valor total &#233; de &quot; &amp;final&amp; &quot;.&quot;" newline="True"/>
+                    <output expression="&quot; Valores acima de mil reais possuem parcelas de at&#233; 10x sem juros. &quot;" newline="True"/>
+                    <output expression="&quot; Voc&#234; deseja parcelar? &quot;" newline="True"/>
+                    <input variable="resposta"/>
+                    <if expression="resposta == &quot;sim&quot;">
+                        <then>
+                            <output expression="&quot; Em quantas vezes?. &quot;" newline="True"/>
+                            <input variable="vezes"/>
+                            <assign variable="parcelas" expression="final/vezes"/>
+                            <output expression="&quot; O valor final &#233; de &quot; &amp;vezes&amp; &quot;x de &quot; &amp;parcelas&amp; &quot;reais.&quot;" newline="True"/>
+                            <output expression="&quot; ...&quot;" newline="True"/>
+                            <output expression="&quot; Transi&#231;&#227;o aprovada. &quot;" newline="True"/>
+                            <output expression="&quot;...&quot;" newline="True"/>
+                            <output expression="&quot; Obrigado por se hospedar conosco :).&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot; O senhor deseja fazer alguma reclama&#231;&#227;o sobre o site? &quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
